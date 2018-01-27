@@ -193,6 +193,13 @@ input[type="radio"] {
 	margin-right: 10px;
 }
 
+textarea {
+	font-size: small;
+	color: #a6a6a6;
+	text-align: left;
+}
+
+
 button {
 	background-color: #66cc00;
 	font-size: 1.2em;
