@@ -1,0 +1,363 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Oswald', sans-serif;
+	color: #a6a6a6;
+}
+
+
+/***************************************
+	GENERAL STYLING
+****************************************/
+
+h1,
+h2,
+h4,
+p {
+	text-align: center;
+}
+ 
+h2 {
+	color: #000;
+}
+
+.f-styling {
+	font-weight: 200;
+}
+
+form {
+	width: 100%;
+	margin-right: auto;	
+}
+
+.border {
+	border: none;
+}
+
+.hr1,
+.hr2,
+.hr3 {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.hr1 {
+	border: 3px solid #ff6600;
+}
+
+.hr2,
+.hr3 {
+	border: 1px solid #ff6600;
+}
+
+.number {
+	background-color: #ff6600;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	font-size: 0.8em;
+	display: inline-block;
+	margin-right: 4px;
+	line-height: 30px;  /* sorted out centring of text/number*/
+	text-align: center;
+	border-radius: 100%
+}
+
+
+/***************************************
+	HEADER
+****************************************/
+
+.header {
+	margin-bottom: 40px;
+	width: 100%;
+	margin: 0;
+}
+
+.header h1	{
+	background-color: #ff6600;
+	color: #fff;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	padding: 30px 50px;
+	margin-top: 0;
+}
+
+
+.font {
+	font-size: 1.5em;
+	color: #000;
+}
+
+
+
+/***************************************
+	NEWSLETTER HEADER
+****************************************/
+
+.newsletter-header {
+	margin-bottom: 30px;
+}
+
+
+
+/***************************************
+	CONTACT INFORMATION
+****************************************/
+
+.contact_info,
+.newsletter {
+	margin-top: 30px;
+}
+
+.contact_info input, select {
+	display: block;
+}
+
+.contact_info input, .newsletter textarea {
+	padding: 20px;
+	width: 100%;
+	background-color: #f2f2f2;
+	border: none;
+}
+
+.contact_info input {
+	margin-top: 10px;
+}
+
+#zipcode {
+	width: 50%;
+}
+
+.contact_info select {
+	background-color: #f2f2f2;
+	margin-top: 10px;
+	padding: 10px 20px;
+	width: 100%;
+	height: 60px;
+	border: none;
+}
+
+input[placeholder="Required"] {
+	font-size: small;
+	direction: rtl;
+	font-style: italic;
+}
+
+input[placeholder="Required"],
+select {
+	font-size: small;
+	color: #a6a6a6;
+}
+
+input {
+	border-radius: 6px;
+}
+
+
+
+/***************************************
+	NEWSLETTER
+****************************************/
+
+.newsletter textarea {
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.newsletter input {
+	margin-bottom: 10px;
+}
+
+.newsletter legend {
+	margin-bottom: 20px;
+}
+
+.newsletter .main_label,
+input[type="checkbox"],
+input[type="radio"] {
+	margin-left: 10px;
+}
+
+.newsletter label {
+	padding-left: 0px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+button {
+	background-color: #66cc00;
+	font-size: 1.2em;
+	color: #fff;
+	padding: 20px;
+	width: 	100%;
+	border: none;
+	outline: none;
+	margin: 10px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+/*input[type="submit"] {
+	cursor: pointer;
+}
+*/
+
+/***************************************
+	FOOTER
+****************************************/
+
+h4 {
+	color: 	 #ccc;
+}
+
+
+
+/*************************************
+	UI ELEMENT STATES PSEUDO CLASSES
+**************************************/
+
+input:focus,
+textarea:focus,
+select:focus {
+	background: #ffc299;
+	border-bottom: 3px solid #ff6600;
+	outline: none;   /* removes default border outline color*/
+
+}
+
+
+
+/*************************************
+	MEDIA QUERIES
+**************************************/
+
+@media (min-width: 768px) {
+
+	.container {
+		width: 60%;
+		margin: auto;
+	}
+
+	.header h1	{
+		font-size: 1.25em;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		margin-bottom: 40px;
+	}
+
+	.newsletter-header {
+		margin-top: 40px;
+	}
+
+	.newsletter-header p {
+		font-size: small;
+	}
+
+	.hr2 {
+		margin-bottom: 40px;
+	}
+
+	.contact_info legend {
+	margin-bottom: -30px;  /* sorts out the spacing between legend 
+							and input full name input fielld*/
+	}
+
+	#form-group input, label, select {
+		width: 70%;
+		display: inline;
+		margin-bottom: 10px;  /* sorts ot spacing between input fields*/
+	}
+
+	#form-group input, select {
+		float: right;
+	}
+
+	#form-group select {
+		width: 70%;
+	}
+
+	#form-group label {
+		float: left;
+		width: 25%;
+		margin-top: 50px; /* sorts out spacing between labels*/
+	}
+
+	#zipcode {
+		max-width: 30%;
+		margin-right: 40%;  /* justifies the input field left */
+	}	 
+
+	.hr3 {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+	.newsletter textarea {
+		margin-bottom: 5px;
+	}
+
+	button {
+		max-width: 96%;
+		margin-left: 10px;
+		font-size: 1em;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	h4 {
+		font-size: small;
+	}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
