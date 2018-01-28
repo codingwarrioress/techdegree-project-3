@@ -141,22 +141,38 @@ form {
 	width: 100%;
 	height: 60px;
 	border: none;
+	color: #a6a6a6;
+	font-size: small;
 }
 
-input[placeholder="Required"] {
+/*input[placeholder="Required"] {
+	font-size: small;
+	direction: rtl;
+	font-style: italic;
+}*/
+
+
+input::-webkit-input-placeholder {  /* to be inserted before my css stying rules*/
+ 	font-size: small;
+	direction: rtl;
+	font-style: italic;
+}
+
+
+input::placeholder {      /* this psuedoclass selector ::placeholder this will only effect the placeholder text and not the main text*/
 	font-size: small;
 	direction: rtl;
 	font-style: italic;
 }
 
-input[placeholder="Required"],
+/*input[placeholder="Required"],
 select {
 	font-size: small;
 	color: #a6a6a6;
-}
+}*/
 
 input {
-	border-radius: 6px;
+	border-radius: 5px;
 }
 
 
@@ -193,14 +209,18 @@ input[type="radio"] {
 	margin-right: 10px;
 }
 
-textarea {
+.newsletter textarea {
 	font-size: small;
 	color: #a6a6a6;
 	text-align: left;
+	background: #ffc299;
+	border-bottom: 3px solid #ff6600;
+	outline: none;
 }
 
 
 button {
+	max-width: 93%;     
 	background-color: #66cc00;
 	font-size: 1.2em;
 	color: #fff;
@@ -208,8 +228,10 @@ button {
 	width: 	100%;
 	border: none;
 	outline: none;
-	margin: 10px 20px;
-	border-radius: 6px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;		/* overrides the inherited browser css rule of inline-block*/
+	border-radius: 5px;
 	cursor: pointer;
 }
 
@@ -232,13 +254,19 @@ h4 {
 	UI ELEMENT STATES PSEUDO CLASSES
 **************************************/
 
-input:focus,
-textarea:focus,
+input:focus, 
 select:focus {
 	background: #ffc299;
 	border-bottom: 3px solid #ff6600;
 	outline: none;   /* removes default border outline color*/
+}
 
+
+.fade {
+        opacity:0.5;
+}
+.fade:hover {
+        opacity:1;
 }
 
 
@@ -314,7 +342,11 @@ select:focus {
 
 	button {
 		max-width: 96%;
-		margin-left: 10px;
+		/*max-width: 520px; */    /* better to use px in this case - sorts out width and centering*/
+		/*margin-left: 10px;*/
+		margin-right: auto;		/* margin auto out width and centering*/
+		margin-left: auto;		
+		display: block;		/* overrides the inherited browser css rule of inline-block*/
 		font-size: 1em;
 		padding-top: 15px;
 		padding-bottom: 15px;
