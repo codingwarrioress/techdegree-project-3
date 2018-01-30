@@ -258,6 +258,9 @@ input:focus,
 select:focus {
 	background: #ffc299;
 	border-bottom: 3px solid #ff6600;
+	transition: background .75s;  /* background now changes a little 
+	more slowly when the input gains focus, instead of just instantly 
+	changing*/
 	outline: none;   /* removes default border outline color*/
 }
 
